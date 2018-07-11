@@ -1,0 +1,17 @@
+[run]
+branch = True
+source = corp_hq_auto_scale
+
+[report]
+fail_under = 0
+show_missing = True
+include = corp_hq_auto_scale*
+omit = tests*
+exclude_lines =
+    # standard ignore
+    pragma: no cover
+
+    # non-runnable code
+    if 0:
+    if __name__ == .__main__.:
+    @abc.abstractmethod
